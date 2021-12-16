@@ -7,11 +7,35 @@
                 <script src="lib/aframe-v1.0.4.min.js"></script>
                 </head>
     <body>
-        <a-scene>
+       <div class="img-wrap">
+          <a-scene>
             <a-cylinder position="0 -8.20 0" radius="10.0" rotation="0.0 0.0 0.0" scale="1.0 0.2 1.0" color="#000000"></a-cylinder>
-            <a-sky src="img.jpg" rotation="0 0 0" color="#888"></a-sky>
-            <a-text font="kelsonsans" value="Sun Street Kameido" width="6" position="-1.5 0.8 -3.5" rotation="0 -15 0"></a-text>
+            <a-sky src="img/1.JPG" rotation="0 0 0" color="#888"></a-sky>
+            <a-text font="kelsonsans" value="はいばらこうこう" width="6" position="-1.5 0.8 -3.5" rotation="0 -15 0"></a-text>
         
+            <a-cylinder position="0 -8.20 0" radius="10.0" rotation="0.0 0.0 0.0" scale="1.0 0.2 1.0" color="#000000"></a-cylinder>
+            <a-sky src="img/2.JPG" rotation="0 0 0" color="#888"></a-sky>
+            <a-text font="kelsonsans" value="はいばらこうこう" width="6" position="-1.5 0.8 -3.5" rotation="0 -15 0"></a-text>
+
+            <a-cylinder position="0 -8.20 0" radius="10.0" rotation="0.0 0.0 0.0" scale="1.0 0.2 1.0" color="#000000"></a-cylinder>
+            <a-sky src="img/3.JPG" rotation="0 0 0" color="#888"></a-sky>
+            <a-text font="kelsonsans" value="はいばらこうこう" width="6" position="-1.5 0.8 -3.5" rotation="0 -15 0"></a-text>
+
         </a-scene>
+
+   </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.img-wrap img:nth-child(n+2)').hide();
+      setInterval(function() {
+        $(".img-wrap img:first-child").fadeOut(2000);
+        $(".img-wrap img:nth-child(2)").fadeIn(2000);
+        $(".img-wrap img:first-child").appendTo(".img-wrap");
+      }, 4000);
+
+    });
+
+  </script>
     </body>
 </html>
