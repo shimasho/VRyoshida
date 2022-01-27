@@ -15,18 +15,17 @@
         
         
     let count = -1;
-    picChange();      
-       
-  function picChange() {
+            picChange();
 
-  count++;
+                function picChange() {
+                    count++;
   // カウントが最大になれば初期値に戻す
-  if (count == img.length) count = 0;
+                if (count == img.length) count = 0;
   //画像選択
-  pic.src = img[count];
+                pic.src = img[count];
   //1秒ごとに実行
-  setTimeout("picChange()", 1000);
-}
+                setTimeout("picChange()", 1000);
+        }
         
     </body>
 </html>
