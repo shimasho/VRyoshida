@@ -9,23 +9,9 @@
     <body>
         <a-scene>
             <a-cylinder position="0 -8.20 0" radius="10.0" rotation="0.0 0.0 0.0" scale="1.0 0.2 1.0" color="#000000"></a-cylinder>
-            <a-sky img id="pic" src="yosida1.jpg","yui.jpg" rotation="0 0 0" color="#888"></a-sky>
+            <a-sky img id="pic" src="yosida1.jpg"rotation="0 0 0" color="#888"></a-sky>
          </a-scene>
 
-        
-        
-    let count = -1;
-            picChange();
-
-                function picChange() {
-                    count++;
-  // カウントが最大になれば初期値に戻す
-                if (count == img.length) count = 0;
-  //画像選択
-                pic.src = img[count];
-  //1秒ごとに実行
-                setTimeout("picChange()", 1000);
-        }
-        
+                
     </body>
 </html>
